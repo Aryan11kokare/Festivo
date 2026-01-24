@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export const BASE_URL = "https://festivo-dsvh.onrender.com";
 export const clientServer = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: BASE_URL,
 });

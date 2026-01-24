@@ -19,6 +19,7 @@ import {
 import ReviewCard from "../components/ReviewCard";
 import BookingModal from "../components/Booking";
 import { getUser } from "../redux/actions/userActions";
+import { BASE_URL } from "../redux";
 
 const View = () => {
   const eventState = useSelector((state) => state.event);
@@ -134,7 +135,7 @@ const View = () => {
         <section className="md:h-[70vh] md:flex px-10">
           <div className="h-full md:w-[50%] flex justify-center items-center ">
             <img
-              src={`http://localhost:3000/${event?.media}`}
+              src={`${BASE_URL}/${event?.media}`}
               alt="Event image logo"
               className=" h-full w-full rounded-xl object-cover"
             />

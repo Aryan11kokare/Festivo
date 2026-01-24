@@ -1,7 +1,9 @@
 import { Calendar, DollarSign, Download, MapPin, Ticket } from "lucide-react";
-import { clientServer } from "../redux";
+import { BASE_URL, clientServer } from "../redux";
+import { useState } from "react";
 
 const TicketCard = ({ ticket }) => {
+  const [loading, setLoading] = useState(false);
   const eventDate = new Date(ticket?.eventId.date);
 
   return (
@@ -49,17 +51,17 @@ const TicketCard = ({ ticket }) => {
               </span>
             </div>
             <button
+              disabled={loading}
               onClick={async () => {
+                setLoading(true);
                 const responce = await clientServer.get(
                   `/ticket/download_ticket?id=${ticket?._id}`,
                 );
+                setLoading(false);
 
-                window.open(
-                  `http://localhost:3000/${responce.data.message}`,
-                  "_blank",
-                );
+                window.open(`${BASE_URL}/${responce.data.message}`, "_blank");
               }}
-              className="flex items-center  mt-2 sm:mt-0 cursor-pointer bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-md py-2 px-4"
+              className="flex items-center disabled:opacity-50 disabled:cursor-not-allowed mt-2 sm:mt-0 cursor-pointer bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-md py-2 px-4"
             >
               <Download className="w-5 h-5 mr-3 " />
               <span className="text-sm">Download Recipt</span>

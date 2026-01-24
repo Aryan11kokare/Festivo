@@ -1,5 +1,6 @@
 import { Calendar, Clock, MapPin, DollarSign, IndianRupee } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../redux";
 
 const categoryColors = {
   Technology: { bg: "bg-blue-50", text: "text-blue-700", badge: "bg-blue-100" },
@@ -29,7 +30,7 @@ export default function EventCard({ event }) {
     <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       <div className="relative h-48 overflow-hidden">
         <img
-          src={`http://localhost:3000/${event?.media}`}
+          src={`${BASE_URL}/${event?.media}`}
           alt={event.title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
