@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+* {
+  scrollbar-color: #000000 #eff6ff; /* thumb color track color */
+  scrollbar-width: thin; /* auto | thin | none */
+  scroll-behavior: smooth;
+}
