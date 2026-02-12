@@ -1,5 +1,5 @@
 import { ArrowLeft, BadgeCheck } from "lucide-react";
-
+import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -62,7 +62,10 @@ const Tickets = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 ">
       <section className=" w-full flex justify-between py-6 px-10">
         <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Festivo</h1>
+          <div className="flex gap-2 justify-start items-center  mb-2">
+            <img src={logo} alt="" className="h-10" />
+            <h1 className="text-4xl font-bold text-gray-900">Festivo</h1>
+          </div>
           <p className="text-gray-600 flex gap-2 justify-center items-center ">
             aryan Kokare <BadgeCheck size={16} className="text-blue-600" />
           </p>

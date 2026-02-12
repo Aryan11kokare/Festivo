@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/logo.png";
 import {
   PartyPopper,
   Mail,
@@ -53,8 +54,8 @@ export default function Login() {
       <div className="w-full sm:max-w-1/2 ">
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100">
           <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center transform rotate-12 shadow-lg">
-              <PartyPopper className="w-8 h-8 text-white -rotate-12" />
+            <div className="flex gap-2 justify-start items-center  ">
+              <img src={logo} alt="" className="h-10" />
             </div>
           </div>
 

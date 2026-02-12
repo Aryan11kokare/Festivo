@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUser } from "../redux/actions/userActions.js";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isLogin, setIsLogin] = useState();
@@ -18,7 +19,8 @@ const Navbar = () => {
 
   return (
     <div className=" h-[14vh] w-full flex justify-between px-10 items-center ">
-      <div>
+      <div className="flex justify-center items-center gap-2">
+        <img src={logo} alt="" className="h-10" />
         <h3 className="text-black font-bold text-4xl">Festivo</h3>
       </div>
       <div className="sm:flex gap-10 hidden font-bold ">

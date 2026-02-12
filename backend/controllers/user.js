@@ -1,6 +1,5 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-const JWT_SECRETE = "aryan11kokare";
 import User from "../models/user.js";
 
 export const signupUser = async (req, res) => {
@@ -46,7 +45,7 @@ export const loginUser = async (req, res) => {
       {
         id: foundUser._id,
       },
-      JWT_SECRETE
+      process.env.JWT_SECRETE,
     );
     res.status(200).json({ token: token });
   } catch (e) {

@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   Plus,
 } from "lucide-react";
+import logo from "../assets/logo.png";
 import StatsCard from "../components/StatsCard.jsx";
 import EventCard from "../components/EventCard.jsx";
 import CategoryFilter from "../components/CategoryFilter.jsx";
@@ -177,7 +178,7 @@ const Dashboard = () => {
     }
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 250);
   };
 
   useEffect(() => {
@@ -252,9 +253,12 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8 flex justify-between">
+        <div className="mb-8 flex justify-between ">
           <div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Festivo</h1>
+            <div className="flex gap-2 justify-start items-center  mb-2">
+              <img src={logo} alt="" className="h-10" />
+              <h1 className="text-4xl font-bold text-gray-900">Festivo</h1>
+            </div>
             <p className="text-gray-600 hidden sm:flex ">
               Manage and track all your events in one place
             </p>
