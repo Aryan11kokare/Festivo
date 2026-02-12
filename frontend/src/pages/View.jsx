@@ -123,7 +123,8 @@ const View = () => {
               <h1 className="text-4xl font-bold text-gray-900">Festivo</h1>
             </div>
             <p className="text-gray-600 flex gap-2 justify-center items-center ">
-              aryan Kokare <BadgeCheck size={16} className="text-blue-600" />
+              {userState?.user?.username}
+              <BadgeCheck size={16} className="text-blue-600" />
             </p>
           </div>
           <div className="flex justify-center items-center gap-2">
