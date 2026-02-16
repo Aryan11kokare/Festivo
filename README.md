@@ -102,8 +102,8 @@
 
   <h2>🌍 Deployment</h2>
   <ul>
-    <li>Frontend: Vercel / Netlify</li>
-    <li>Backend: Render / Railway / VPS</li>
+    <li>Frontend: Vercel</li>
+    <li>Backend: Render </li>
   </ul>
 
   <p>
